@@ -31,6 +31,14 @@ p {
     width: 50%;
     padding: 5px;
   }
+
+  .column {
+    float: left;
+    width: 50%;
+    padding-top: 100px;
+    padding-left: 100px;
+  }
+  
   
   /* Clearfix (clear floats) */
   .row::after {
