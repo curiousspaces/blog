@@ -60,6 +60,13 @@ p {
     width: 60%;
   }
 
+  .center {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin: auto;
+    width: 50%;
+  }
+
   .description {
     font-family: 'Shadows Into Light Two';
     font-size: 14px;
