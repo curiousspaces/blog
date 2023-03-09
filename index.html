@@ -1,164 +1,103 @@
 <!DOCTYPE HTML>
 <meta name="viewport">
 <html>
+    <style>
+        img {
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          padding: 5px;
+          width: 150px;
+        }
+        
+        img:hover {
+          box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+        }
+    </style>
     <head>
         <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
         <link rel="icon" type="image/png" href="assets/logo.png" sizes="32x32" />
         <title>curiousspaces</title>
     </head>
     <body>
-        <h1>a curious space</h1>
+        <h1 style="padding-bottom: 20px;">a curious space</h1>
         <br>
-        <p class="description">hi, these are pieces I've created- some based off of existing works, and others i've conjured 
-            up on my own. i am not fully sure what I want this space to be but for now sharing some color, shapes,
-            and thoughts</p>
-        <br>
-        <br>
-        <div class="row">
-            <div class="dualcolumn">
-            <img src="assets/zebras.jpeg" style="width:100%; padding-left: 15%; padding-top: 8%;">
-            </div>
-            <div class="dualcolumn">
-            <img src="assets/zebras_final.jpeg" style="width:75%;">
-            </div>
-            <p class="description">
-                 (5.16.2022)
-            </p>
+        <nav class="navMenu">
+            <a href="#words">text</a>
+            <a href="#pictures">visuals</a>
+            <div class="dot"></div>
+        </nav>
+
+        <div id=words class="content" style="padding-top: 10%; padding-bottom: 20%;">
+            <ul>
+                <p class="subHeader">Links:</p>
+                <li style="padding-bottom: 2px">
+                    <a class="writingLinks" href="10_things_2.6.23.html"> 10 things I Consumed (January 2023)</a>
+                </li>
+                <li>
+                    <a class="writingLinks" href="10_things_3.2.23.html"> 10 things I Consumed (February 2023)</a>
+                </li>
+            </ul>
         </div>
-        <div class="center">
-            <img src="assets/cambridge_flowers.jpeg" style="width: 100%;">
-            <p class="description">
-                 (5.22.2022)
-            </p>
-        </div>
-        <div class="row">
-            <div class="dualcolumn">
-            <img src="assets/barharbor.png" style="width:100%; padding-left: 15%; padding-top: 8%;">
-            <p class="description" style="padding-left: 15%;">
-                (5.12.2022)
-           </p>
-            </div>
-            <div class="dualcolumn">
-            <img src="assets/barharbor_actual.png" style="width:75%;">
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="tricolumn">
-            <img src="assets/arch1.png" style="width:100%; height: 500px;">
-            </div>
-            <div class="tricolumn">
-            <img src="assets/arch2.png" style="width:100%; height: 500px;">
-            </div>
-            <div class="tricolumn">
-            <img src="assets/arch3.png" style="width:100%; height: 500px;">
-            </div>
-            <p class="description">
-                  Royal Arch Trail in Chautaqua Park  - Boulder, Colorado.
-                 (5.7.2022)
-            </p>
-        </div>
-        <br>
-        <div class="row">
-            <div class="dualcolumn">
-            <img src="assets/narrows.png" style="width:75%; height: 75%; padding-left: 20%;">
-            </div>
-            <p class="description" style="width:80%; height: 75%; padding-top: 5%;">
-                The Narrows in Zion National Park, Utah. (5.5.2022)
-            </p>
-        </div>
-        <div class="row">
-            <div class="dualcolumn">
-                <p class="description" style="padding-left: 20%; padding-top: 8%;">
-                    Dal Lake (Srinigar - Jammu and Kashmir, India).(4.23.2022)
-                </p>
-            </div>
-            <div class="dualcolumn">
-                <img src="assets/dallake.png" style="width:100%; margin-right: 0%; display: block;">
-            </div>
-        </div>
-        <br>
-        <div class="break">
-            <img src="assets/hikingshoes.png" style="width:100%">
-            <p class="description">Sand Beach - Acadia National Park. (4.25.2022)</p>
-        </div>
-        <div class="row">
-            <div class="dualcolumn">
-            <img src="assets/camping.png" style="width:100%; height: 400px;">
-            </div>
-            <div class="dualcolumn">
-            <img src="assets/camping_actual.png" style="width:100%; height: 400px;">
-            </div>
-            <p class="description">(03.2022)</p>
-        </div>
-        <br>
-        <div class="break">
-            <img src="assets/eye.png" style="width:100%">
-            <p class="description">(2013)</p>
-        </div>
-        <div class="row">
-            <div class="dualcolumn">
-            <img src="assets/headphones.jpg" style="width:100%">
-            </div>
-            <div class="dualcolumn">
-            <img src="assets/swimming.jpg" style="width:100%">
-            </div>
-        </div>
-        <p class="description">(2021)</p>
-        <br>
-        <br>
-        <div class="shared-row">
-            <img src="assets/highland_cow.png" style="width:18%; height: 25%; padding-bottom: 8%;">
-            <img src="assets/pig.png" style="width: 25%; padding-bottom: 8%;">
-            <img src="assets/cow.png" style="width:32%; padding-bottom: 8%;">
-            <p class="description" style="width:20%; padding-top: 5%; padding-bottom: 8%; float: right !important;"> (02.2022)</p>
-        <div>
-        <br>
-        <div class="row">
-            <div class="tricolumn">
-            <img src="assets/tree1.png" style="width:100%">
-            <p class="description" style="width:100%; padding-top: 5%; padding-bottom: 8%;">         
-                Pen Ink Scribble Drawing (05.2021)</p>
-            </div>
-            <div class="tricolumn">
-            <img src="assets/tree2.png" style="width:100%">
-            </div>
-            <div class="tricolumn">
-            <img src="assets/tree3.png" style="width:100%">
-            </div>
+        <div id="pictures">
+            <p class="subHeader">Thumbnails:</p>
+            <div class="content">
+                <a href="nh_falls.html">
+                    <img src="assets/nh_nature_painting.jpg" alt="Falls" style="width:150px">
+                </a>
+                <a href="zebras.html">
+                    <img src="assets/zebras.jpeg" alt="Grazing" style="width:150px">
+                </a>
+
+                <a href="barharbor.html">
+                    <img src="assets/barharbor.png" alt="Painted Sunset" style="width:150px">
+                </a>
+
+                <a href="cambridge_flowers.html">
+                    <img src="assets/cambridge_flowers.jpeg" alt="Blooming" style="width:150px">
+                </a>
+                <a href="colorado.html">
+                    <img src="assets/arch3.png" alt="Gradient Arch" style="width:150px">
+                </a>
             
-        </div>
-        <br>
-        <div class="row">
-            <div class="dualcolumn">
-            <img src="assets/holihand.png" style="width:100%; padding-top: 8%;">
-            </div>
-            <div class="dualcolumn">
-            <img src="assets/peacock.png" style="width:100%">
-            </div>
-        </div>
-        <p class="description" style="width:100%; text-align: center;">Holi (03.2021)</p>
-        </div>
-        <br>
-        <br>
-        <p class="description">Miscellaneous things</p>
+                <a href="narrows.html">
+                    <img src="assets/narrows.png" alt="The Narrows" style="width:150px">
+                </a>
+                <a href="dallake.html">
+                    <img src="assets/dallake.png" alt="Shikara" style="width:150px">
+                </a>
 
-        <div style="padding-left: 3%">
-            <img src="assets/mouth.png" style="width:25%;">      
-            <img src="assets/lady2.png" style="width:25%; padding-left: 8%;">
-            <img src="assets/elephant.png" style="width:40%; padding-left: 10%;">
+                <a href="shoes.html">
+                    <img src="assets/hikingshoes.png" alt="Hike" style="width:150px">
+                </a>
 
-            <div class="column">
-                <img src="assets/tentacles.png" style="width:80%; padding-left: 4%;">
-            </div>
+                <a href="camping.html">
+                    <img src="assets/camping.png" alt="Blooming" style="width:150px">
+                </a>
+            
+                <a href="eye.html">
+                    <img src="assets/eye.png" alt="Look" style="width:150px">
+                </a>
 
-            <div class="column">
-                <img src="assets/wingbottom.png" style="width: 75%;">
-                <img src="assets/wingtop.png" style="width: 75%;">
-            </div>
+                <a href="headphones.html">
+                    <img src="assets/headphones.jpg" alt="Underwater" style="width:150px">
+                </a>
+                <a href="underwater.html">
+                    <img src="assets/swimming.jpg" alt="The Farm" style="width:150px">
+                </a>
+
+                <a href="animals.html">
+                    <img src="assets/highland_cow.png" alt="Blooming" style="width:150px">
+                </a>
+
+                <a href="ink_tree.html">
+                    <img src="assets/tree2.png" alt="Rooted Tree" style="width:150px">
+                </a>
+
+                <a href="holi.html">
+                    <img src="assets/peacock.png" alt="Holi" style="width:150px">
+                </a>
+            </div>    
         </div>
     </body>
 </html>

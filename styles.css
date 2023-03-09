@@ -1,10 +1,11 @@
 h1 {
-    color: #999999;
+    color: #00008B;
     font-family: 'Shadows Into Light Two';
     font-size: 24px;
     font-weight: bolder;
-    margin-top: 0px;
+    margin-top: 4%;
     margin-bottom: 1px;
+    margin-left: 5%;
 }
 
 p {
@@ -14,6 +15,26 @@ p {
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 1px;
+}
+
+a {
+  color: #999999;
+  font-family: arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 1px;
+  text-decoration: none;
+  padding: 2%;
+  display: inline-flex;
+}
+
+body {
+  background-size: 25px 25px;
+  background-image:
+    linear-gradient(to right, #ADD8E6 0.5px, transparent 0.5px),
+    linear-gradient(to bottom, #ADD8E6 0.5px, transparent 0.5px);
+  margin: auto;
 }
 
 * {
@@ -70,4 +91,86 @@ p {
   .description {
     font-family: 'Shadows Into Light Two';
     font-size: 14px;
+  }
+
+  .content {
+    margin: auto;
+    padding: 10px;
+  }
+
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .navMenu {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding-bottom: 30px;
+  }
+  
+  .navMenu a {
+    color: #999999;
+    text-decoration: none;
+    font-family: 'Shadows Into Light Two';
+    font-size: 1.2em;
+    font-weight: 500;
+    display: inline-block;
+    width: 115px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navMenu a:hover {
+    color: #00008B;
+  }
+  
+  .navMenu .dot {
+    width: 6px;
+    height: 6px;
+    background: #00008B;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-transform: translateX(30px);
+    transform: translateX(30px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .navMenu a:nth-child(1):hover ~ .dot {
+    -webkit-transform: translateX(45px);
+    transform: translateX(45px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+  
+  .navMenu a:nth-child(2):hover ~ .dot {
+    -webkit-transform: translateX(110px);
+    transform: translateX(110px);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    opacity: 1;
+  }
+
+  .writingLinks {
+    font-family: 'Shadows Into Light Two';
+    color: #00008B;
+    font-size: 16px;
+    display: block;
+    padding-left: 90px;
+    padding-bottom: 0;
+  }
+
+  .subHeader {
+    font-family: 'Shadows Into Light Two';
+    color: darkslategray;
+    font-size: 16px;
+    display: block;
+    padding-left: 75px;
   }
