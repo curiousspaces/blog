@@ -1,0 +1,362 @@
+
+<!DOCTYPE HTML>
+<meta name="viewport">
+<html>
+   <style>
+      body {
+         background-size: 25px 25px;
+         background-image:
+            linear-gradient(to right, #ADD8E6 0.5px, transparent 0.5px),
+            linear-gradient(to bottom, #ADD8E6 0.5px, transparent 0.5px);
+         display: flex;
+         justify-content: center;
+      }
+
+      .content {
+         background: white;
+         padding: 5px;
+         width: 80%;
+      }
+    
+      p, li, ul {
+         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+         font-size: 12px;
+      }
+
+      li {
+         padding-bottom: 25px;
+      }
+
+      a {
+         text-decoration: none;
+         color: blue;
+      }
+
+      .img-center {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         padding-bottom: 10px;
+         width: 35%;
+      }
+
+      .captions {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 300px;
+         padding-bottom: 10px;
+         font-size: 10px;
+         text-align: center;
+         color: gray;
+      }
+
+      .alert {
+         background-color: lightblue;
+         padding: 5px;
+         border-radius: 5px;
+      }
+      
+      .videos {
+         display: block;
+         margin: 0 auto;
+      }
+
+      .row:after {
+         content: "";
+         display: table;
+         clear: both;
+      }
+
+      * {box-sizing: border-box}
+         body {margin:0}
+         .mySlides {display: none}
+         
+         /* Slideshow container */
+         .slideshow-container {
+           display: block;
+           position: relative;
+           margin: auto;
+           width: 70%;
+         }
+         
+         /* Next & previous buttons */
+         .prev, .next {
+           cursor: pointer;
+           position: absolute;
+           top: 50%;
+           width: auto;
+           padding: 16px;
+           margin-top: -22px;
+           color: white;
+           font-weight: bold;
+           font-size: 12px;
+           transition: 0.6s ease;
+           border-radius: 0 3px 3px 0;
+           user-select: none;
+           background-color: rgba(0,0,0,0.8);
+         }
+         
+         /* Position the "next button" to the right */
+         .next {
+           right: 0;
+           border-radius: 3px 0 0 3px;
+         }
+         
+         /* Caption text */
+         .text {
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+           color: white;
+           font-size: 15px;
+           font-weight: bold;
+           padding: 50px 12px;
+           position: absolute;
+           bottom: 8px;
+           width: 100%;
+           text-align: center;
+         }
+
+         /* The dots/bullets/indicators */
+         .dot {
+           cursor: pointer;
+           height: 8px;
+           width: 8px;
+           margin: 0 2px;
+           background-color: #bbb;
+           border-radius: 50%;
+           display: inline-block;
+           transition: background-color 0.6s ease;
+         }
+         
+         .active, .dot:hover {
+           background-color: #717171;
+         }
+         
+         /* Fading animation */
+         .fade {
+           animation-name: fade;
+           animation-duration: 1.5s;
+         }
+         
+         @keyframes fade {
+           from {opacity: .4} 
+           to {opacity: 1}
+         }
+         
+         /* On smaller screens, decrease text size */
+         @media only screen and (min-width: 480px) {
+           .prev, .next,.text {font-size: 11px}
+
+           .img-center {
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+               padding-bottom: 10px;
+               width: 100%;
+            }
+            .slideshow-container {
+               display: block;
+               position: relative;
+               margin: auto;
+               width: 100%;
+            }
+
+             /* Caption text */
+            .text {
+               font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+               color: white;
+               font-size: 20px;
+               font-weight: bold;
+               padding: 50px 12px;
+               position: absolute;
+               bottom: 8px;
+               width: 100%;
+               text-align: center;
+            }
+         }
+
+         @media (min-width: 1025px)  { 
+            .text {
+               font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+               color: white;
+               font-size: 18px;
+               font-weight: bold;
+               padding: 50px 12px;
+               position: absolute;
+               bottom: 8px;
+               width: 100%;
+               text-align: center;
+            }
+            .img-center {
+               display: block;
+               margin-left: auto;
+               margin-right: auto;
+               padding-bottom: 10px;
+               width: 40%;
+            }
+            .slideshow-container {
+               display: block;
+               position: relative;
+               margin: auto;
+               width: 60%;
+            }
+         }
+   </style>
+
+   <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+      showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+      showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+         let i;
+         let slides = document.getElementsByClassName("mySlides");
+         let dots = document.getElementsByClassName("dot");
+         if (n > slides.length) {slideIndex = 1}    
+         if (n < 1) {slideIndex = slides.length}
+         for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+         }
+         for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+         }
+         slides[slideIndex-1].style.display = "block";  
+         dots[slideIndex-1].className += " active";
+      }
+   </script>
+
+   <head>
+         <link rel="icon" type="image/png" href="assets/logo.png" sizes="32x32" />
+         <title>curiousspaces</title>
+   </head>
+    <body>
+      <div class="content">
+         <p>Saturday, April 1st</p>
+         <br>
+         <p>
+            10 of the things that it was most difficult to shut up about this month:
+         </p>
+      <ol>
+      <li style="padding-bottom: 2px;">
+         Microgreens! - In true <a href="https://www.penguinrandomhouse.com/books/292953/the-omnivores-dilemma-by-michael-pollan/9780143038580/readers-guide/">Michael Pollan </a> fashion, I spent the month of March following my microgreens from seed to table. Microgreens are essentially the edible seedling of vegetables and herbs. They are a nutritional supplement and a flavor and texture enhancement. They are insanely nutrient dense- loaded up with vitamins C, E, and K, lutein, and beta-carotene- almost 40 (!!) times than the mature leaves of the same plants. While the health factor is exciting, it pales in comparison to the thrill of consuming these greens one week after planting them in a plastic takeout container.
+      </li> 
+      <p>Supplied needed:  </p>       
+      <ul>- Microgreen seeds. I planted collards greens - purchased from <a href="https://sproutpeople.org/collard-greens/">SproutPeople.org</a> (.org can always be trusted)</ul>
+      <ul>- This five minute long <a href="https://www.youtube.com/watch?v=XCsUjeUJeQ0&ab_channel=JoshSattinFarming">youtube video</a> that explains how to plant the seeds</ul>
+      <ul>- Soil</ul>
+      <ul>- Water</ul>
+      <ul>- Plastic takeout containers</ul>
+      <p>Please enjoy this slideshow of my microgreens:  </p>       
+         <div class="slideshow-container">
+         
+         <div class="mySlides fade" style="display: block;">
+           <img class= "img-center" src="assets/10_things_3_30_23/sprout.jpeg">
+           <div class="text">sprouting</div>
+         </div>
+         
+         <div class="mySlides fade">
+           <img class= "img-center" src="assets/10_things_3_30_23/grown.jpeg">
+           <div class="text">grown seedlings</div>
+         </div>
+         
+         <div class="mySlides fade">
+           <img class= "img-center" src="assets/10_things_3_30_23/salad.jpeg">
+           <div class="text">a little olive oil and salt</div>
+         </div>
+         
+         <div class="mySlides fade">
+            <img class= "img-center" src="assets/10_things_3_30_23/garnish.jpeg">
+            <div class="text">as garnish</div>
+          </div>
+
+         <a class="prev" onclick="plusSlides(-1)">❮</a>
+         <a class="next" onclick="plusSlides(1)">❯</a>
+         
+         </div>
+         <br>
+         
+         <div style="text-align:center">
+           <span class="dot" onclick="currentSlide(1)"></span> 
+           <span class="dot" onclick="currentSlide(2)"></span> 
+           <span class="dot" onclick="currentSlide(3)"></span> 
+           <span class="dot" onclick="currentSlide(4)"></span> 
+         </div>
+
+      <br>
+      <li>
+         Sticking to the plant theme, I learned this month that bananas are and have been going extinct!? While this doesn’t seem to be new information to anyone I know, I am still coming to terms with it. This <a href="https://www.bonappetit.com/story/banana-fungus-monoculture-extinction">Bon Appetit </a> article explains some of the history, impact, and concern of this phenomenon. Savor every single banana you eat- even the brown spots.
+      </li>
+      <li>  
+         <a href="https://www.imdb.com/title/tt7335184/">YOU Season 4</a> -Every time I talk about this show it is in one of two ways. The first is an embarrassing confession that yes, I do binge-watch Penn Badgely kidnap and randomly murder people in an extremely unrealistic fashion and enjoy it. And the second is debating murder theories and analyzing character arcs with friends as if someone’s life truly does depended on it. I did enjoy watching this season, and I was further impressed at how Netflix has managed to make four seasons of a show on the exact same storyline and still keep it interesting. [If you haven’t been sucked in yet - stay away]
+      </li>
+      <li>  
+         Pottery Class at the <a href="https://www.clayloungeboston.com/">Clay Lounge</a> - I attended a one time pottery workshop (funded by my wonderful friends) to learn how to make wheel-thrown and slab built pottery pieces. An extremely fun but trying experience.      
+      </li>
+      <div style="display: flex; justify-content: center;">
+         <div>
+            <img src="assets/10_things_3_30_23/berryplate.jpeg" style="width: 220px; height: 320px; margin: 25px;">
+            <p class="captions" style="width: 220px;">
+               A slab built berry plate. Wash, drain, and eat all in one place.
+            </p>
+         </div>
+         <div>
+            <img src="assets/10_things_3_30_23/bowl.jpeg" style="width: 220px; height: 320px; margin: 25px;">
+            <p class="captions" style="width: 220px;">
+               A cup / bowl / mug container - wheel thrown.
+            </p>
+         </div>   
+      </div>
+      <li> 
+         <a href="https://www.theparisreview.org/blog/2019/07/16/the-crane-wife/">The Crane Wife by CJ Hauser</a>-  A friend shared this essay with me after reviewing it in a writing class. I enjoyed reading this- the essay style is captivating, and the story the writer shares is beautiful and well-written. Please read.  
+      </li>
+      <li> 
+         <a href="https://www.amazon.com/gp/product/B09N8LMPSP/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1">This,</a> dare I say, life changing book light from Amazon for all pre bedtime readers. 
+      </li>
+      <img class= "img-center" src="assets/10_things_3_30_23/bedlight.jpeg" style="width: 25%">
+      <li style="padding-bottom: 2px;">
+         The previously mentioned booklight has enabled a month of heavy reading. These were the three novels I got through: 
+      </li>
+      <ul>- <b><a href="https://www.goodreads.com/book/show/16299.And_Then_There_Were_None">And Then There Were None by Agatha Christie</a></b> (5/5) : This is an all time favorite book of mine. If you read it once in fifth grade that is not enough, a second reading is essential.</ul>
+      <ul>- <b><a href="https://www.goodreads.com/en/book/show/29981261">Butterfly Garden by Dot Hutchison</a></b> (4/5): This book is extremely dark and the trigger warning list is long. The story is unique and makes the book hard to put down but I would only recommend it to people who enjoy psychological thrillers.</ul>
+      <ul>- <b><a href="https://www.goodreads.com/book/show/35959740-circe">Circe by Madeline Miller</a></b> (5/5): This book took me back to my 7th grade Language Arts class reading of The Odyssey. A very fun and enchanting read. Any fans of Greek mythology would really enjoy it. </ul>
+      <div style="display: flex; justify-content: center;">
+         <div>
+            <img src="assets/10_things_3_30_23/andThenThereWereNone.jpeg" style="width: 100px; height: 155px; margin: 10px;">
+         </div>
+         <div>
+            <img src="assets/10_things_3_30_23/butterflyGarden.jpg" style="width: 110px; height: 155px; margin: 10px;">
+         </div>   
+         <div>
+            <img src="assets/10_things_3_30_23/Circe.jpg" style="width: 110px; height: 155px; margin: 10px;">
+         </div>  
+      </div>
+      <br>
+      <li> 
+         Protests in Peru - I came across the news of protests going on in Peru while exploring the idea of traveling to Machu Picchu. Protests calling for the resignation of the current president and members of Congress have resulted in a lot of violence and unrest across the country for the past several months. <a href="https://www.aljazeera.com/amp/opinions/2023/2/15/understanding-the-crisis-in-peru">This news article</a> explains the protests in detail.      </li>
+      <li>     
+         The headline: <a href="https://www.cnn.com/2023/02/22/tech/vanderbilt-chatgpt-shooting-email/index.html#:~:text=New%20York%20(CNN)%20Vanderbilt%20University's,follow%20the%20school's%20usual%20processes.">“Vanderbilt University apologizes for using ChatGPT to write mass shooting email” </a>
+
+         <p>In response to the school shooting at Michigan State, Vanderbilt University sent an email to students about the tragedy with this parenthetical reference at the bottom of the email- “Paraphrase from OpenAI's ChatGPT AI language model”. The university has released several apologies but nothing can erase how truly mental this interaction is. For every sci-fi movie where AI takes over the world, no one thought large language models replacing human empathy would be the opening scene.</p>
+      </li>
+      <li>
+         <a href="https://youtu.be/jN7mSXMruEo">This youtube video about SUVs.</a> It’s a lengthy video with a more than annoying narrator so I won’t blame anyone for not watching it. The video explains how dangerous and insane the massive uptick in SUVs and light trucks on the road has been over the past few years. Referencing SUV driver behavior studies and risk profiles, increasing vehicle emissions, uninspiring vehicle safety testing, and pedestrian and cyclist-related accidents, the video paints a very convincing anti-SUV argument. 
+The video highlight: <a href="https://www.tyreextinguishers.com/">The TyreExtinguishers</a> - a group in Europe whose mission is to “make it impossible to own a huge polluting 4x4 in the world's urban areas” by deflating tires and causing inconvenience for vehicle owners. 
+      </li>
+      <img class="img-center" src="assets/10_things_3_30_23/frontBlindZones.jpeg" style="width: 225px">
+      <br>
+      <hr>
+      <p>Second hand consumption: My friend sent me this picture after reaching New York and I wanted to share it with everyone.</p>
+      <img class="img-center" src="assets/10_things_3_30_23/pups.jpeg" style="width: 235px">
+   
+      <p>~Thank you for indulging me~</p>
+      <p>Happy April!</p>
+   </div>
+   </body>
+</html>
