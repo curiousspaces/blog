@@ -112,6 +112,7 @@ body {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding-bottom: 30px;
+    display: block;
   }
   
   .navMenu a {
@@ -174,3 +175,22 @@ body {
     display: block;
     padding-left: 75px;
   }
+
+  @media only screen and (min-width: 320px) {
+    .navMenu {
+      position: absolute;
+      left: 34%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      padding-bottom: 30px;
+      display: block;
+    }
+
+    .subHeader {
+      font-family: 'Shadows Into Light Two';
+      color: darkslategray;
+      font-size: 16px;
+      display: block;
+      padding-left: 15px;
+    }
+  } 
