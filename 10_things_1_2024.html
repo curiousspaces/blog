@@ -3,11 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <html>
    <style>
-      body {
-         background-size: 25px 25px;
-         background-image:
-            linear-gradient(to right, #ADD8E6 0.5px, transparent 0.5px),
-            linear-gradient(to bottom, #ADD8E6 0.5px, transparent 0.5px);
+      body {    
          display: flex;
          justify-content: center;
       }
@@ -61,6 +57,33 @@
          display: block;
          margin: 0 auto;
       }
+        
+        /* CSS for the slideshow */
+        .slideshow-container {
+            max-width: 400px;
+            height: 350px;
+            position: relative;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        img {
+            height: 300px;
+        }
+
+        /* CSS for slide transitions */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            0% {opacity: 0.4;}
+            100% {opacity: 1;}
+        }
    </style>
    <head>
          <link rel="icon" type="image/png" href="assets/logo.png" sizes="32x32" />
@@ -82,15 +105,16 @@
         My goal is to be learn to make clothes that will last longer, and get more wear. 
         <br><br>
         Some beginner projects:
-        <div style="display: flex; justify-content: center;">
-            <div style="margin-right: 50px;">
+        <br><br>
+        <div style="display: flex; justify-content: center; ">
+            <div style="margin-right: 15px;">
                <img src="assets/10_things_1_13_24/crosstown_crescent.jpeg" style="width: 100%; height: 225px;" loading="lazy">
                <p class="captions" style="width: 190px;">
                     <a href="https://www.etsy.com/listing/1418521614/crosstown-crescent-bag-pdf-sewing?utm_source=google&utm_medium=cpc&utm_campaign=Search_US_DSA_GGL_ENG_General-Nonbrand_Listing_All&utm_ag=US-EN_DSA-Listing%252BPages&utm_custom1=_k_CjwKCAiA75itBhA6EiwAkho9e9rVLLSKvfYVY3i6UuPh5-o6uJLEu5o-SZx0earH8fhpzj8QY_YvDhoCZ6YQAvD_BwE_k_&utm_content=go_19641398131_146555551100_646785872362_aud-1184785539978:dsa-1690913055567_c_&utm_custom2=19641398131&gad_source=1&gclid=CjwKCAiA75itBhA6EiwAkho9e9rVLLSKvfYVY3i6UuPh5-o6uJLEu5o-SZx0earH8fhpzj8QY_YvDhoCZ6YQAvD_BwE">Crosstown Crescent bag</a>
                </p>
             </div>
             <div>
-               <img src="assets/10_things_1_13_24/sewing_shorts.jpeg" style="width: 100%; height: 175px; margin-top: 20px;" loading="lazy">          
+               <img src="assets/10_things_1_13_24/sewing_shorts.jpeg" style="width: 95%; height: 170px; margin-top: 20px;" loading="lazy">          
                <p class="captions" style="width: 215px;">
                     <a href="https://www.youtube.com/watch?v=21YlldA77Y8&ab_channel=RoseryApparel">Pajama shorts</a>
                </p> 
@@ -122,21 +146,20 @@
       <li>
         My brother and his fiancée are new parents to the best pup, Tikki. She is afraid of vacuums and likes biting toes but she knows not to.
       </li>
-      <div style="display: flex; justify-content: center;">
-        <div>
-           <img src="assets/10_things_1_13_24/tikki_ball.jpeg" style="width: 90%; height: 200px; margin: 25px;" loading="lazy">
+      <div class="slideshow-container" style="width: 100%">
+        <div class="slide fade">
+            <img style="width: 250px" src="assets/10_things_1_13_24/tikki_ball.jpeg">
         </div>
-        <div>
-           <img src="assets/10_things_1_13_24/tikki.jpeg" style="width: 90%; height: 200px; margin: 25px;" loading="lazy">          
+        <div class="slide fade">
+            <img style="width: 210px" src="assets/10_things_1_13_24/tikki.jpeg">
         </div>
-        <div>
-            <img src="assets/10_things_1_13_24/tikki_vaccuum.jpeg" style="width: 100%; height: 200px; margin: 25px;" loading="lazy">          
-         </div>     
-     </div>
-     <div class="captions">
+        <div class="slide fade">
+            <img style="width: 100%" src="assets/10_things_1_13_24/tikki_vaccuum.jpeg">
+        </div>
+        <div class="captions" style="display: flex; justify-content: center;">
         <p>name inspired by <a href="https://en.wikipedia.org/wiki/Aloo_tikki">aloo tikki</a></p>
     </div> 
-    <br>
+</div> 
     <li> 
         Reading:
         <br><br>
@@ -248,3 +271,23 @@
    </div>
    </body>
 </html>
+
+<script>
+    // JavaScript for the slideshow
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000); // Change image every 2 seconds (adjust as needed)
+    }
+</script>
