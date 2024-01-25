@@ -37,6 +37,12 @@ body {
   margin: auto;
 }
 
+.images {
+  background-color: #ADD8E6;
+  padding-top: 20px;
+  margin: auto;
+}
+
 * {
     box-sizing: border-box;
   }
