@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width">
 <html>
     <style>
         img {
@@ -73,6 +73,16 @@
                 margin-left: calc(-728px * 8);
             }
         }
+
+
+        /* Smartphones (portrait and landscape) ----------- */
+        @media only screen
+        and (min-device-width : 320px)
+        and (max-device-width : 480px) {
+        .slide img {
+            width: 50%;
+        }
+    }
     </style>
     <head>
         <link rel="stylesheet" href="styles.css">
@@ -116,59 +126,9 @@
         </div>
     </body>
     <div class="images">
-        <div id="pictures">
-            <div id="slideshow">
-                <div class="slide-wrapper">
-                    <div class="slide">
-                        <a href="morraine.html">
-                            <img src="assets/morraine.jpg" alt="Morraine" style="width:100%" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="slide">
-                        <a href="colorado.html">
-                            <img src="assets/arch3.png" alt="Gradient Arch" style="width:57%" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="slide">
-                        <a href="house.html">
-                            <img src="assets/house.jpeg" alt="Nike" style="width:60%" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="slide">
-                        <a href="fried_egg.html">
-                            <img src="assets/fried_egg.jpg" alt="Nike" style="width:100%" loading="lazy">
-                        </a>
-                    </div>   
-                    <div class="slide">
-                        <a href="barharbor.html">
-                            <img src="assets/barharbor.png" alt="Painted Sunset" style="width:90%" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="slide">
-                        <a href="dunes.html">
-                            <img src="assets/dunes.jpg" alt="Sand Dunes" style="width:100%" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="slide">
-                        <a href="pool.html">
-                            <img src="assets/pool.jpg" alt="Pool" style="padding-right: 350px; padding-right: 200px; transform: rotate(90deg); width:80%" loading="lazy">
-                        </a>
-                    </div>    
-                    <div class="slide">
-                        <a href="underwater.html">
-                            <img src="assets/swimming.jpg" alt="The Farm" style="width:60%" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="slide">
-                        <a href="dallake.html">
-                            <img src="assets/dallake.png" alt="Shikara" style="width:100%" loading="lazy">
-                        </a>
-                    </div>                                                                           
-                </div>
-            </div>
-            
+        <div id="pictures">            
             <p class="subHeader">Thumbnails:</p>
-            <div class="content" style="color: #38ADCB;">
+            <div class="content">
                 <a href="louise.html">
                     <img src="assets/morraine.jpg" alt="Morraine" style="width:150px" loading="lazy">
                 </a>

@@ -31,14 +31,10 @@ a {
 
 body {
   background-size: 25px 25px;
-  background-image:
-    linear-gradient(to right, #ADD8E6 0.5px, transparent 0.5px),
-    linear-gradient(to bottom, #ADD8E6 0.5px, transparent 0.5px);
   margin: auto;
 }
 
 .images {
-  background-color: #ADD8E6;
   padding-top: 20px;
   margin: auto;
 }
